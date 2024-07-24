@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  @keyframes enlarge {
+    0% { transform: scale(1); } /* Normal size */
+    50% { transform: scale(1.1); } /* Enlarged size */
+    100% { transform: scale(1); } /* Back to normal size */
+    0%, 50% { opacity: 0.7; } /* Reduced light */
+    51%, 100% { opacity: 1; } /* Increased light */
+    0% { transform: scale(1); filter: brightness(1); } /* Normal size and brightness */
+    50% { transform: scale(1.1); filter: brightness(1.2); } /* Enlarged size and increased brightness */
+    100% { transform: scale(1); filter: brightness(1); } /* Back to normal size and brightness */
+  }
+  
+  .animate-enlarge {
+    animation: enlarge 5s ease-in-out infinite;
+  }
+
+/* Define keyframe animation */
+@keyframes moveLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  50% {
+    width: 50%;
+    opacity: 0.5;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+/* Apply styles */
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: gray;
+  transition: background-color 0.3s ease;
+}
+
+.line.active {
+  background-color: teal;
+}
+
+/* Add any global styles here */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.container {
+  padding: 1rem;
+}
