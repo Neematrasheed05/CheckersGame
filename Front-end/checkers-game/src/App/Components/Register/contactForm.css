@@ -1,0 +1,117 @@
+/* Wrapper to center the form */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1em;
+  }
+  
+  /* Card container */
+  .auth-card {
+    background-image: linear-gradient(163deg, #64ffda 0%, #64ffda 100%);
+  border-radius: 22px;
+  transition: all 0.3s;
+  width: 90%; /* Adjust width as needed */
+  max-width: 600px; /* Limit maximum width */
+  }
+  .auth-card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(100, 255, 218, 0.3);
+  }
+
+  .form-card2 {
+    border-radius: 0;
+    transition: all 0.2s;
+  }
+  
+  .form-card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+  }
+  
+  
+  /* Container for forms with sliding effect */
+  .auth-form-container {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+  }
+  
+  .auth-form-container.sign-up {
+    transform: translateX(0);
+  }
+  
+  .auth-form-container.log-in {
+    transform: translateX(-100%);
+  }
+  
+  /* Form styling */
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 2em;
+    background-color: #171717;
+    border-radius: 20px;
+  }
+  
+  /* Heading styling */
+  .form-heading {
+    text-align: center;
+    color: #64ffda;
+    font-size: 1.2em;
+  }
+  
+  /* Form field styling */
+  .form-field {
+    display: flex;
+    align-items: center;
+    background-color: #171717;
+    padding: 0.6em;
+    border-radius: 10px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  }
+  
+  /* Input field styling */
+  .input-field {
+    background: none;
+    border: none;
+    width: 100%;
+    color: #ccd6f6;
+    padding: 0.5em;
+  }
+  
+  .auth-btn {
+    cursor: pointer;
+    margin-bottom: 3em;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #64ffda;
+    font-weight: bold;
+    outline: 1px solid #64ffda;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .auth-btn:hover {
+    background-color: #64ffda;
+    color: #000;
+    cursor: pointer;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  }
+  
+  
+  /* Toggle text styling */
+  .toggle-text {
+    text-align: center;
+    color: #ccd6f6;
+  }
+  
+  .toggle-text span {
+    color: #64ffda;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  

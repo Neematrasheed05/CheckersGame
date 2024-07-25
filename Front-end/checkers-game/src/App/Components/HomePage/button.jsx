@@ -1,11 +1,14 @@
 import React from 'react';
 import './Button.css'; // Import the CSS file for custom animations
 
-const Button = () => {
+const Button = ({ onClick }) => {
   return (
-    <button className="btn relative flex justify-center items-center w-52 h-12 overflow-hidden backdrop-blur-lg rounded-full transition duration-500">
-      <strong className="relative z-20 font-['Press Start 2P'] text-sm tracking-widest text-white drop-shadow-[0_0_4px_white]">
-        Get Started !
+    <button 
+      className="btn relative flex justify-center items-center w-52 h-12 overflow-hidden backdrop-blur-lg rounded-full transition duration-500" 
+      onClick={onClick}
+    >
+      <strong className="relative z-20 font-['Orbitron'] text-sm tracking-widest text-white drop-shadow-[0_0_4px_white]">
+        Get Started
       </strong>
       <div id="container-stars" className="absolute inset-0 z-[-1] w-full h-full overflow-hidden transition duration-500 backdrop-blur-lg rounded-full">
         <div id="stars" className="relative w-[200rem] h-[200rem] bg-transparent"></div>
