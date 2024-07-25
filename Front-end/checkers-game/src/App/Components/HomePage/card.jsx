@@ -2,9 +2,12 @@ import React, { useRef } from 'react';
 import Button from './button';
 import './Card.css'; // Import the CSS file for custom animations
 import buttonSound from "../../Assets/buttonClick.mp3"
+import { useNavigate } from "react-router-dom";
 
 const Card = () => {
   const audioRef = useRef(null);
+  const navigate = useNavigate();
+
 
 
   const playSound = () => {
@@ -13,6 +16,8 @@ const Card = () => {
         console.error('Error playing audio:', error);
       });
     }
+    navigate('/register'); // Change to your desired route
+
   };
 
   
@@ -25,7 +30,7 @@ const Card = () => {
           Checkers is a classic board game that comes to life online. You can play checkers versus the computer or with a friend whenever you want! Play today immediately on all of your devices using your favorite internet browser          </p>
         </div>
         <div className="flex items-center justify-center">
-        <Button onClick={playSound} />
+        <Button onClick={playSound}/>
         </div>
         <audio ref={audioRef} src={buttonSound} />
       </div>

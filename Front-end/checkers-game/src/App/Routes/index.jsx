@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from '../Components';
+import HomePage from '../Components/HomePage';
 import ContactForm from '../Components/Register'
-
+import CheckersBoard from '../Components/Board';
 function AllRoutes(props) {
     return (
         <div>
@@ -10,6 +10,7 @@ function AllRoutes(props) {
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/register" element={<ContactForm/>}/>
+                <Route path='/board' element={<CheckersBoard/>}/>
             </Routes>
             
             </BrowserRouter>

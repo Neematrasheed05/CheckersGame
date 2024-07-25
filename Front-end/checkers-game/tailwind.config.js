@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        '128': '32rem', // for 32 * 0.25rem = 8rem
+      },
       animation: {
         gradient_301: 'gradient_301 5s ease infinite',
         pulse_3011: 'pulse_3011 4s infinite',
