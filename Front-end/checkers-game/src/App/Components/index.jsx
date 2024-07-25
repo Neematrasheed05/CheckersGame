@@ -1,5 +1,5 @@
 import React from 'react';
-import board from "../Assets/board.jpeg"
+import board from "../Assets/checkers.jpg"
 import Card from './HomePage/card';
 
 const HomePage = () => {
