@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import './contactForm.css'; // Import custom CSS file
-import background from "../../Assets/3dBackground.jpg";
+import background from "../../Assets/checkers.jpg";
 import buttonSound from "../../Assets/buttonClick.mp3"
 
 const ContactForm = () => {

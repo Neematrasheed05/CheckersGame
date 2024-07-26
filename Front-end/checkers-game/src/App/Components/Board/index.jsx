@@ -1,7 +1,9 @@
+// src/CheckersBoard.js
 
 import React from 'react';
 import blackPiece from '../../Assets/blackPiece.png'; 
 import whitePiece from '../../Assets/whitePiece.png';
+import boardBackground from "../../Assets/boardBackground.jpg"
 
 const CheckersBoard = () => {
   const board = [];
@@ -23,7 +25,7 @@ const CheckersBoard = () => {
       boardRow.push(
         <div
           key={`${row}-${col}`}
-          className={`flex justify-center items-center w-16 h-16 ${isBlack ? 'bg-gray-700' : 'bg-gray-200'}`}
+          className={`flex justify-center items-center w-16 h-16 ${isBlack ? 'bg-brown-800' : 'bg-brown-400'}`}
         >
           {piece}
         </div>
@@ -33,8 +35,16 @@ const CheckersBoard = () => {
   }
 
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="flex flex-col w-128 h-128">{board}</div>
+    <div className="relative h-screen w-screen">
+      <img
+        src={boardBackground}
+        className="absolute top-0 left-0 h-full w-full object-cover object-center z-0"
+        alt="Background"
+        loading="lazy"
+      />
+      <div className="flex justify-center items-center h-full relative z-10">
+        <div className="flex flex-col">{board}</div>
+      </div>
     </div>
   );
 };

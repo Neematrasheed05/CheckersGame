@@ -7,6 +7,12 @@ module.exports = {
       spacing: {
         '128': '32rem', // for 32 * 0.25rem = 8rem
       },
+      colors: {
+        brown: {
+          400: '#d2b48c', // Light brown
+          800: '#8b4513', // Dark brown
+        },
+      },
       animation: {
         gradient_301: 'gradient_301 5s ease infinite',
         pulse_3011: 'pulse_3011 4s infinite',
