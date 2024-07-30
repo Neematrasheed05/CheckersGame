@@ -7,6 +7,7 @@ module.exports = {
       spacing: {
         '128': '32rem', // for 32 * 0.25rem = 8rem
       },
+      
       colors: {
         brown: {
           400: '#d2b48c', // Light brown
